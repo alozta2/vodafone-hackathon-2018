@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PIS</title>
+    <link rel="stylesheet" type="text/css" href= {{ url_for('static', filename = 'css/main.css') }} >
+    <script src= {{ url_for('static', filename = 'js/main.js') }} ></script>
+</head>
+<body onload= {{adjust_view}}>
+    <div class="content">
+
+        <div id="welcome">
+            <img src= {{ url_for('static', filename = 'css/images/vodafone_logo.png') }} >
+            <p><b>PIS</b></p>
+        </div>
+
+        <div id="params">
+            <form method="POST">
+                <input name="text" id="msisdn_text" placeholder="Msisdn" value= {{ msisdn }} >
+                <input type="submit" onclick="changeViewToLoading()">
+                <!--
+                <input type="reset" value="Reset" onclick="resetToInitialView()">
+                -->
+            </form>
+        </div>
+
+        <hr/>
+
+        <div id="response_loading">
+            <img src= {{ url_for('static', filename = 'css/images/loading_red.gif') }} >
+        </div>
+
+        <div id="response">
+            <div class="score_box">
+                <p><b>Welcome {{msisdn}}, </b></p>
+                <p style="display:inline;"><b>Your PIS is </b></p>
+                <p id="score"><b>100!</b></p>
+            </div>
+
+            <div class="notice">
+                <p><b>Highlights</b></p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="notice">
+                <p><b>Offers</b></p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

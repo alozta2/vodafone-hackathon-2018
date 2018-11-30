@@ -1,0 +1,42 @@
+.content {
+    width: 500px;
+    height: 700px;
+    /*position: fixed;*/
+    overflow: hidden;
+    word-wrap: break-word;
+    float: left;
+    padding: 15px;
+    border: double;
+}
+
+#logo, img {
+    width: 47%;
+}
+
+#params {
+    width: inherit;
+}
+
+#response_loading {
+    display: none;
+}
+
+#response {
+    width: inherit;
+    display: none;
+}
+
+.score_box {
+    width: 40%;
+    border: solid;
+}
+
+#score {
+    font-size: xx-large;
+    margin: 0;
+    display: inline;
+}
+
+.notice {
+
+}
